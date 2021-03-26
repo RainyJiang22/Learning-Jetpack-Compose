@@ -19,7 +19,6 @@ package com.example.androiddevchallenge.ui.news.data
  * @author jacky
  * @date 2021/3/18
  */
-
 /**
  * A generic class that holds a value or an exception
  */

@@ -41,10 +41,9 @@ class NavigationViewModel : ViewModel() {
 
     @MainThread
     fun navigateToInterests() {
-        //go to navigateToInterests
+        // go to navigateToInterests
         _screen.value = Screen.Interests
     }
-
 
     @MainThread
     fun navigateToArticle(postId: String) {

@@ -56,7 +56,7 @@ fun HomeScreen(
 ) {
 
     val coroutineScope = rememberCoroutineScope()
-    //use the scaffold and add the topBar
+    // use the scaffold and add the topBar
     Scaffold(
         scaffoldState = scaffoldState,
         drawerContent = {
@@ -86,7 +86,7 @@ fun HomeScreen(
 }
 
 
-//the list of post
+// the list of post
 @Composable
 private fun PostList() {
 

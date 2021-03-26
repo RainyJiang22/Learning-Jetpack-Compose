@@ -55,7 +55,6 @@ import kotlinx.coroutines.launch
  * @author jacky
  * @date 2021/3/19
  */
-
 class TabContent(val section: Sections, val content: @Composable () -> Unit)
 
 @Composable

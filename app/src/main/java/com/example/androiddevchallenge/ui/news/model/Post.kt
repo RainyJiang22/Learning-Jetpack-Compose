@@ -21,7 +21,6 @@ import androidx.annotation.DrawableRes
  * @author jacky
  * @date 2021/3/18
  */
-
 data class Post(
     val id: String,
     val title: String,

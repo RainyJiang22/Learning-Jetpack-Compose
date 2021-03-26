@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.example.androiddevchallenge.ui.news
 
 import android.os.Bundle
@@ -49,9 +48,8 @@ class NewsActivity : AppCompatActivity() {
             }
         }
     }
-
-
-    //built you app
+    
+    // built you app
     @Composable
     fun MyApp(navigationViewModel: NavigationViewModel) {
         val curScreen by navigationViewModel.curScreen.observeAsState(Screen.Home)

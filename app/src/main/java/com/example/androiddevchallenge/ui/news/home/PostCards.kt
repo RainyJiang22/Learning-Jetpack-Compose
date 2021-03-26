@@ -103,7 +103,7 @@ fun PostCardSimple(
         modifier = Modifier
             .clickable { navigateTo(Screen.Article(post.id)) }
             .padding(16.dp)
-            //this is by defining a custom action
+            // this is by defining a custom action
             .semantics {
                 customActions = listOf(
                     CustomAccessibilityAction(

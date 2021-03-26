@@ -43,7 +43,6 @@ import com.example.androiddevchallenge.ui.theme.MyTheme
  * @author jacky
  * @date 2021/3/19
  */
-
 @Composable
 fun PostCardPopular(
     post: Post,
