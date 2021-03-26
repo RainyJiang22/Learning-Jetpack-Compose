@@ -22,4 +22,11 @@
     <string name="popular_jetNews">Popular on Jetnews</string>
 
     <string name="cd_more_actions">More actions</string>
+
+    <string name="cd_navigate_up">Navigate up</string>
+    <string name="cd_add_to_favorites">Add to favorites</string>
+    <string name="cd_share">Share</string>
+    <string name="cd_text_settings">Text settings</string>
+
+
 </resources>

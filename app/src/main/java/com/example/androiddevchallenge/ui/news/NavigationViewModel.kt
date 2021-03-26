@@ -20,6 +20,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.Screen
+import com.example.androiddevchallenge.ui.news.model.Post
 
 /**
  * @author jacky
@@ -37,18 +38,6 @@ class NavigationViewModel : ViewModel() {
             return true
         }
         return false
-    }
-
-    @MainThread
-    fun navigateToInterests() {
-        // go to navigateToInterests
-        _screen.value = Screen.Interests
-    }
-
-    @MainThread
-    fun navigateToArticle(postId: String) {
-        // go to navigateTOArticle
-        _screen.value = Screen.Article(postId = postId)
     }
 
     @MainThread

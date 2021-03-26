@@ -80,7 +80,9 @@ fun HomeScreen(
                 }
             )
         },
-        content = { PostList() }
+        content = {
+            PostList(navigateTo)
+        }
     )
 
 }
@@ -88,7 +90,7 @@ fun HomeScreen(
 
 // the list of post
 @Composable
-private fun PostList() {
+private fun PostList(navigateTo: (Screen) -> Unit) {
 
 
     val list = remember { posts }
@@ -98,39 +100,44 @@ private fun PostList() {
     val postsHistory = list.subList(7, 10)
 
     LazyColumn(content = {
-        item { PostListTop(post = postTop) }
         item {
-            PostSimple(
-                post = postsSimple
-            )
+            PostListTop(post = postTop, navigateTo = navigateTo)
         }
-        item { PostPopular(posts = postsPopular) }
-        item { PostHistory(posts = postsHistory) }
+        item {
+            PostSimple(posts = postsSimple, navigateTo = navigateTo)
+        }
+        item {
+            PostPopular(posts = postsPopular, navigateTo = navigateTo)
+        }
+        item {
+            PostHistory(posts = postsHistory, navigateTo = navigateTo)
+        }
     })
 }
 
 
 @Composable
-private fun PostListTop(post: Post) {
+private fun PostListTop(post: Post, navigateTo: (Screen) -> Unit) {
     Text(
         modifier = Modifier.padding(start = 16.dp, top = 16.dp, end = 16.dp),
         text = "Top stories for you",
         style = MaterialTheme.typography.subtitle1
     )
-    PostCardTop(post = post, modifier = Modifier.clickable { /*TODO*/ })
+    PostCardTop(post = post, modifier = Modifier.clickable { navigateTo(Screen.Article(post)) })
     PostListDivider()
 }
 
 
 @Composable
 private fun PostSimple(
-    post: List<Post>
+    posts: List<Post>,
+    navigateTo: (Screen) -> Unit
 ) {
     Column {
-        post.forEach { post ->
+        posts.forEach { post ->
             PostCardSimple(
                 post = post,
-                navigateTo = { /*TODO*/ },
+                navigateTo = { navigateTo(Screen.Article(post)) },
                 isFavorite = false,
                 onToggleFavorite = { /*TODO*/ }
             )
@@ -142,7 +149,8 @@ private fun PostSimple(
 
 @Composable
 private fun PostPopular(
-    posts: List<Post>
+    posts: List<Post>,
+    navigateTo: (Screen) -> Unit
 ) {
     Column {
         Text(
@@ -155,7 +163,7 @@ private fun PostPopular(
             items(posts) { post ->
                 PostCardPopular(
                     post = post,
-                    navigationTo = {  },
+                    navigationTo = { navigateTo(Screen.Article(post)) },
                     modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
                 )
             }
@@ -167,13 +175,14 @@ private fun PostPopular(
 
 @Composable
 private fun PostHistory(
-    posts: List<Post>
+    posts: List<Post>,
+    navigateTo: (Screen) -> Unit
 ) {
     Column {
         posts.forEach { post ->
             PostCardHistory(
                 post = post,
-                navigateTo = { /*TODO*/ }
+                navigateTo = { navigateTo(Screen.Article(post)) }
             )
             PostListDivider()
         }

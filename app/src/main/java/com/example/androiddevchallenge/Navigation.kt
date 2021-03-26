@@ -17,6 +17,8 @@ package com.example.androiddevchallenge
 import com.example.androiddevchallenge.ScreenName.ARTICLE
 import com.example.androiddevchallenge.ScreenName.HOME
 import com.example.androiddevchallenge.ScreenName.INTERESTS
+import com.example.androiddevchallenge.ui.news.model.Post
+
 /**
  * @author jacky
  * @date 2021/3/18
@@ -26,5 +28,5 @@ enum class ScreenName { HOME, INTERESTS, ARTICLE }
 sealed class Screen(val id: ScreenName) {
     object Home : Screen(HOME)
     object Interests : Screen(INTERESTS)
-    data class Article(val postId: String) : Screen(ARTICLE)
+    data class Article(val post: Post) : Screen(ARTICLE)
 }

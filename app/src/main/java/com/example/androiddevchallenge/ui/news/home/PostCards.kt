@@ -33,6 +33,7 @@ import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
@@ -46,6 +47,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.Screen
+import com.example.androiddevchallenge.ui.news.NavigationViewModel
 import com.example.androiddevchallenge.ui.news.data.posts.impl.post3
 import com.example.androiddevchallenge.ui.news.model.Post
 
@@ -101,7 +103,7 @@ fun PostCardSimple(
 
     Row(
         modifier = Modifier
-            .clickable { navigateTo(Screen.Article(post.id)) }
+            .clickable { navigateTo(Screen.Article(post)) }
             .padding(16.dp)
             // this is by defining a custom action
             .semantics {
@@ -153,7 +155,7 @@ fun BookmarkButton(
 fun PostCardHistory(post: Post, navigateTo: (Screen) -> Unit) {
     Row(
         Modifier
-            .clickable(onClick = { navigateTo(Screen.Article(post.id)) })
+            .clickable(onClick = { navigateTo(Screen.Article(post)) })
             .padding(16.dp)
     ) {
         PostImage(

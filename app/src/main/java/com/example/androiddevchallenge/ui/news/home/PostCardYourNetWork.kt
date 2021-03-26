@@ -55,7 +55,7 @@ fun PostCardPopular(
         modifier = modifier.size(280.dp, 240.dp)
     ) {
 
-        Column(modifier.clickable { navigationTo(Screen.Article(post.id)) }) {
+        Column(modifier.clickable { navigationTo(Screen.Article(post)) }) {
             Image(
                 painter = painterResource(post.imageId),
                 contentDescription = null,
