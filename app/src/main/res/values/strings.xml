@@ -10,4 +10,16 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+
+    <string name="unbookmark">unbookmark</string>
+    <string name="bookmark">bookmark</string>
+
+    <string name="cd_open_navigation_drawer">cd_open_navigation_drawer</string>
+
+    <string name="home">Home</string>
+    <string name="interests">Interests</string>
+
+    <string name="popular_jetNews">Popular on Jetnews</string>
+
+    <string name="cd_more_actions">More actions</string>
 </resources>
