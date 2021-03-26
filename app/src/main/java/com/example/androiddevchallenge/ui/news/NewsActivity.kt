@@ -27,7 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import com.example.androiddevchallenge.Screen
-import com.example.androiddevchallenge.news.article.ArticleScreen
+import com.example.androiddevchallenge.ui.news.article.ArticleScreen
 import com.example.androiddevchallenge.ui.news.home.HomeScreen
 import com.example.androiddevchallenge.ui.news.interests.TabSections
 import com.example.androiddevchallenge.ui.theme.MyTheme
