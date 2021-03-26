@@ -39,7 +39,6 @@ class NewsActivity : AppCompatActivity() {
 
     private val navigationViewModel: NavigationViewModel by viewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -48,7 +47,8 @@ class NewsActivity : AppCompatActivity() {
             }
         }
     }
-    
+
+
     // built you app
     @Composable
     fun MyApp(navigationViewModel: NavigationViewModel) {
@@ -64,6 +64,6 @@ class NewsActivity : AppCompatActivity() {
                 }
             }
         }
-    }
 
+    }
 }

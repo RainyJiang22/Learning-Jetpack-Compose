@@ -15,8 +15,6 @@
  */
 package com.example.androiddevchallenge.ui.news.article
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 /**
@@ -27,7 +25,4 @@ import androidx.compose.runtime.Composable
 @Composable
 fun ArticleScreen() {
 
-    Column {
-        Text(text = "this is article screen")
-    }
 }

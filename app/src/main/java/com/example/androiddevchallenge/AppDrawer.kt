@@ -170,15 +170,3 @@ fun PreviewAppDrawer() {
         )
     }
 }
-
-@Preview
-@Composable
-fun PreviewAppDrawerInterest() {
-    MyTheme {
-        AppDrawer(
-            navigationTo = { },
-            currentScreen = Screen.Interests,
-            closeDrawer = { }
-        )
-    }
-}
