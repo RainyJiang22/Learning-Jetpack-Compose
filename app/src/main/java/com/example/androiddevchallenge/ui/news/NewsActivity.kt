@@ -48,7 +48,6 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
-
     // built you app
     @Composable
     fun MyApp(navigationViewModel: NavigationViewModel) {
@@ -64,6 +63,6 @@ class NewsActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
+
 }

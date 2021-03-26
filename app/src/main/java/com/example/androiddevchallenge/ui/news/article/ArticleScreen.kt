@@ -15,6 +15,9 @@
  */
 package com.example.androiddevchallenge.ui.news.article
 
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 /**
@@ -24,5 +27,7 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun ArticleScreen() {
-
+    Surface(color = MaterialTheme.colors.background) {
+        Text(text = "Ready... Set... GO!")
+    }
 }

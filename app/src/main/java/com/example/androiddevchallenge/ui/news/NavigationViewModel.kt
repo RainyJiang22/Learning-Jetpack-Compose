@@ -55,4 +55,5 @@ class NavigationViewModel : ViewModel() {
     fun navigateTo(screen: Screen) {
         _screen.value = screen
     }
+
 }
