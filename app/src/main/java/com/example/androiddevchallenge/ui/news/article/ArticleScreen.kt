@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.jetnews.ui.article
+package com.example.androiddevchallenge.ui.news.article
 
 import android.content.Context
 import android.content.Intent
@@ -38,10 +38,8 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -52,7 +50,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.ui.news.article.PostContent
 import com.example.androiddevchallenge.ui.news.data.posts.impl.post3
 import com.example.androiddevchallenge.ui.news.home.BookmarkButton
 import com.example.androiddevchallenge.ui.news.model.Post

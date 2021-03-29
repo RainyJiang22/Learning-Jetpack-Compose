@@ -29,7 +29,7 @@ import com.example.androiddevchallenge.Screen
 import com.example.androiddevchallenge.ui.news.home.HomeScreen
 import com.example.androiddevchallenge.ui.news.interests.TabSections
 import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.jetnews.ui.article.ArticleScreen
+import com.example.androiddevchallenge.ui.news.article.ArticleScreen
 
 /**
  * @author jacky
@@ -61,7 +61,7 @@ class NewsActivity : AppCompatActivity() {
                     is Screen.Interests -> TabSections(navigateTo = navigationViewModel::navigateTo)
                     is Screen.Article -> ArticleScreen(
                         post = (curScreen as Screen.Article).post,
-                        onBack = { onBackPressed() },
+                        onBack = { navigationViewModel.onBack() },
                         isFavorite = false,
                         onToggleFavorite = {})
                 }
